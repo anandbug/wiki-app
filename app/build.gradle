@@ -4,7 +4,6 @@ ext {
     // App dependencies
     supportLibVersion = '1.0.0'
     glideVersion = '4.8.0'
-    junitVersion = '4.12'
 }
 
 android {
@@ -16,6 +15,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -27,6 +27,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildToolsVersion '28.0.3'
 }
 
 dependencies {
@@ -34,28 +35,14 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$supportLibVersion"
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
     implementation 'com.google.android.material:material:1.1.0-alpha01'
-    implementation "androidx.recyclerview:recyclerview:$supportLibVersion"
-    implementation "androidx.cardview:cardview:$supportLibVersion"
-
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.1'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
-
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
     implementation "com.github.bumptech.glide:glide:$glideVersion"
-    implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
     annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
-    implementation("com.github.bumptech.glide:okhttp3-integration:$glideVersion") {
-        exclude group: 'glide-parent'
-    }
 
     implementation 'com.jakewharton:butterknife:9.0.0-rc1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc1'
-
-    testImplementation "junit:junit:$junitVersion"
-    androidTestImplementation 'androidx.test:runner:1.1.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
 }

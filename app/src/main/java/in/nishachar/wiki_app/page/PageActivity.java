@@ -4,14 +4,12 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ViewSwitcher;
 
 import com.bumptech.glide.GenericTransitionOptions;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
